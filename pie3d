@@ -1,0 +1,11 @@
+political_knowledge <- c(45, 30, 15, 10)
+labels <- c("High", "Medium", "Low", "None")
+colors <- c("green", "blue", "yellow", "red")
+library(plotrix)
+pie3D(political_knowledge, labels = labels, explode = 0.1, col = colors,
+      main = "Political Knowledge", labelcex = 0.8)
+
+legend("topright", legend = labels, col = colors, pch = 16,
+       title = "Knowledge Level", cex = 0.6
+       
+       
