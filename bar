@@ -1,0 +1,3 @@
+f<-c(7,12,28,3,41)
+g<-c("mar","apr","may","jun","jul")
+barplot(f,names=g,xlab="qwe",ylab="yui",main="revenuechart",col="red",border="green")
