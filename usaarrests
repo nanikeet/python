@@ -1,0 +1,23 @@
+df<-data.frame(USArrests)
+df
+ncol(df)
+print(sapply(df,class))
+print(sapply(df,length))
+print(summary(df))
+cat("no of features",ncol(df),"\n")
+max_rape_state<-rownames(df)[which.max(df$Rape)]
+max_rape_state
+max_murder_state<-rownames(df)[which.max(df$Murder)]
+max_murder_state
+min_murder_state<-rownames(df)[which.min(df$Murder)]
+min_murder_state
+assault_median<-median(df$Assault)
+high_assault_states<-rownames(df)[df$Assault>assault_median]
+high_assault_states
+murder_quartile<-quantile(df$Murder,probs = c(0,0.25,0.5,0.75,1))
+bottom_25_states<-rownames(df)[df$Murder<=murder_quartile[2]]
+bottom_25_states
+hist(df$Murder,xlab="murder arrests",main="histogram of murders")
+plot(density(df$Murder),xlab = "murder arrests",main = "density plot of murders")
+plot(df$UrbanPop,df$Murder,col=2 ,pch =20)
+barplot(df$Murder,xlab = "state",ylab = "Murder Rate",main = "murder rate by state",col = "blue",las=2,ylim = c(0,15))
