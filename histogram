@@ -1,0 +1,2 @@
+data("AirPassengers")
+hist(AirPassengers,xlab="no of passengers",ylab="frequency",main="histogram",xlim=c(200,700),col="darkred")
